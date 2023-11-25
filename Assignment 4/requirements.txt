@@ -1,0 +1,8 @@
+tensorflow
+pytest
+numpy
+PyYAML
+tqdm
+tensorflow-addons
+scipy
+top_k_accuracy_score

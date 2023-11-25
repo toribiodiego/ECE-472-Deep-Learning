@@ -1,0 +1,81 @@
+data_augmentation:
+  random_crop:
+    enabled: true
+    padding: 4
+  random_horizontal_flip:
+    enabled: true
+  color_jitter:
+    enabled: true
+    brightness: 0.5
+    contrast: 0.5
+    saturation: 0.5
+    hue: 0.2
+  cutout:
+    enabled: true
+    size: 16
+
+
+architecture:
+  - layer: "Conv2D"
+    filter_size: 3
+    num_filters: 32
+    input_depth: 3
+    stride: 1
+    padding: "SAME"
+  - layer: "BatchNormalization"
+  - layer: "Activation"
+    type: "relu"
+  - layer: "Pooling"
+    pool_size: 2
+    stride: 2
+    pooling_type: "max"
+    padding: "VALID"
+  - layer: "Conv2D"
+    filter_size: 3
+    num_filters: 64
+    input_depth: 32
+    stride: 1
+    padding: "SAME"
+  - layer: "BatchNormalization"
+  - layer: "Activation"
+    type: "relu"
+  - layer: "Pooling"
+    pool_size: 2
+    stride: 2
+    pooling_type: "max"
+    padding: "VALID"
+  - layer: "Conv2D"
+    filter_size: 3
+    num_filters: 128
+    input_depth: 64
+    stride: 1
+    padding: "SAME"
+  - layer: "BatchNormalization"
+  - layer: "Activation"
+    type: "relu"
+  - layer: "FullyConnected"
+    input_neurons: 8192
+    output_neurons: 512
+    activation: "relu"
+  - layer: "Dropout"
+    dropout_rate: 0.5  
+  - layer: "FullyConnected"
+    input_neurons: 512
+    output_neurons: 10
+    activation: "none"
+
+learning:
+  l2_lambda: 0.0001
+
+model:
+  learning_rate: 0.00075
+  batch: 64
+  epochs: 100
+  weight_decay: 0.0
+
+training:
+  validation_split: 0.1
+
+dataset_info:
+  save_path: "cifar-10-python.tar.gz"
+  extract_path: "."
