@@ -1,0 +1,4 @@
+pytest
+tensorflow
+numpy
+PyYAML
