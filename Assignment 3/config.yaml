@@ -1,0 +1,39 @@
+architecture:
+  - layer: "Conv2D"
+    filter_size: 5
+    num_filters: 16
+    input_depth: 1
+    activation: "relu"
+    stride: 1
+    padding: "SAME"
+  - layer: "Pooling"
+    pool_size: 2
+    stride: 2
+    pooling_type: "max"
+    padding: "SAME"
+  - layer: "FullyConnected"
+    input_neurons: 3136  # 14*14*16 from the output of pooling layer
+    output_neurons: 128
+    activation: "relu"
+  - layer: "Dropout"
+    dropout_rate: 0.5
+  - layer: "FullyConnected"
+    input_neurons: 128
+    output_neurons: 10
+    activation: "none"  # Output layer
+
+learning:
+    l2_lambda: 0.001
+
+
+model:
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 5
+  weight_decay: 0.01
+
+training:
+  validation_split: 0.2
+
+model_save:
+  path: "best_model.ckpt"
