@@ -1,0 +1,16 @@
+learning:
+  num_epochs: 1300
+  step_size: 0.00055
+  batch_size: 128
+
+model:
+  num_inputs: 2
+  num_outputs: 1
+  num_hidden_layers: 9
+  hidden_layer_width: 350
+  hidden_activation: "relu"
+  output_activation: "sigmoid"
+  l2_penalty: 0.00001
+  dropout_rate: 0.04
+  n_points: 580
+  noise: 0.05

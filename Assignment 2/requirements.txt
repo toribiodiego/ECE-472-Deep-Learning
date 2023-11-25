@@ -1,0 +1,8 @@
+tensorflow
+pytest
+numpy
+PyYAML
+matplotlib
+tensorflow-metal
+tqdm
+scikit-learn
