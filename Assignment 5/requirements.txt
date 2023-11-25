@@ -1,0 +1,8 @@
+pandas
+numpy
+transformers
+tensorflow
+sentence-transformers
+datasets
+scikit-learn
+PyYAML
