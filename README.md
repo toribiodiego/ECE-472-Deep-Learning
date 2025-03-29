@@ -32,7 +32,7 @@ Additionally, relevant research papers will be provided throughout the semester 
 - **Assignment 1:** Linear Regression with Gaussian Basis Functions
 - **Assignment 2:** Multi-layer Perceptron for Spiral Classification
 - **Assignment 3:** CNN Classification of MNIST Digits
-- **Assignment 4:** Advanced CNN Classification on CIFAR10 and CIFAR100
+- **Assignment 4:** CNN Classification on CIFAR10 and CIFAR100
 - **Assignment 5:** Text Classification using AG News Dataset
 - **Assignment 6:** Implementation of Multi-Head Attention and Transformer Blocks
 - **Assignment 7:** Image Fitting and Exploration with SIREN
