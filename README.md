@@ -28,6 +28,77 @@ Additionally, relevant research papers will be provided throughout the semester 
 
 ### Repository Structure
 
+Below is a revised section that includes the repository tree and a concise explanation on how to reproduce the work. This version assumes you’re working inside each assignment's directory:
+
+---
+
+### Repository Structure
+
+```
+.
+├── Assignment 1
+│   ├── artifacts
+│   ├── basis_expansion.py
+│   ├── config_noisy_sine.yaml
+│   ├── linear.py
+│   ├── requirements.txt
+│   └── tests
+├── Assignment 2
+│   ├── MLP.py
+│   ├── artifacts
+│   ├── basis_expansion.py
+│   ├── config.yaml
+│   ├── linear.py
+│   ├── requirements.txt
+│   └── tests
+├── Assignment 3
+│   ├── cnn.py
+│   ├── config.yaml
+│   ├── requirements.txt
+│   └── tests
+├── Assignment 4
+│   ├── 10.yaml
+│   ├── 100.yaml
+│   ├── CIFAR10.py
+│   ├── CIFAR100.py
+│   ├── requirements.txt
+│   ├── response.pdf
+│   └── test.py
+├── Assignment 5
+│   ├── config.yaml
+│   ├── hw5.py
+│   ├── requirements.txt
+│   └── results.pdf
+├── Assignment 6
+│   ├── hw6.py
+│   ├── output.txt
+│   └── test.py
+├── Assignment 7
+│   ├── requirements.txt
+│   └── sine.py
+└── README.md
+```
+
+Each assignment folder is self-contained with its own `requirements.txt` file and a configuration file (`config.yaml`) for customizing hyperparameters and assignment-specific settings.
+
+#### How to Reproduce the Environment
+
+1. **Create a Virtual Environment:**
+   ```bash
+   python -m venv venv
+   ```
+2. **Install Dependencies:**
+   Once inside an assignment’s directory (e.g., `Assignment 1`), run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the Assignment Script:**
+   Execute the main script for the assignment:
+   ```bash
+   python basis_expansion.py
+   ```
+
+### Assignments
 
 - **Assignment 1:** Linear Regression with Gaussian Basis Functions
 - **Assignment 2:** Multi-layer Perceptron for Spiral Classification
