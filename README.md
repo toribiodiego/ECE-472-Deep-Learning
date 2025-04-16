@@ -25,63 +25,56 @@ The primary reference for this course is [*Deep Learning*](http://www.deeplearni
 Additionally, relevant research papers will be provided throughout the semester to deepen understanding and facilitate project work.
 
 
+#### Repository Structure
 
-### Repository Structure
-
-Below is a revised section that includes the repository tree and a concise explanation on how to reproduce the work. This version assumes you’re working inside each assignment's directory:
-
----
-
-### Repository Structure
-
-```
+```markdown
 .
 ├── Assignment 1
-│   ├── artifacts
 │   ├── basis_expansion.py
-│   ├── config_noisy_sine.yaml
-│   ├── linear.py
-│   ├── requirements.txt
-│   └── tests
+│   └── linear.py
 ├── Assignment 2
 │   ├── MLP.py
-│   ├── artifacts
 │   ├── basis_expansion.py
-│   ├── config.yaml
-│   ├── linear.py
-│   ├── requirements.txt
-│   └── tests
+│   └── linear.py
 ├── Assignment 3
-│   ├── cnn.py
-│   ├── config.yaml
-│   ├── requirements.txt
-│   └── tests
+│   └── cnn.py
 ├── Assignment 4
-│   ├── 10.yaml
-│   ├── 100.yaml
 │   ├── CIFAR10.py
-│   ├── CIFAR100.py
-│   ├── requirements.txt
-│   ├── response.pdf
-│   └── test.py
+│   └── CIFAR100.py
 ├── Assignment 5
-│   ├── config.yaml
-│   ├── hw5.py
-│   ├── requirements.txt
-│   └── results.pdf
+│   └── hw5.py
 ├── Assignment 6
-│   ├── hw6.py
-│   ├── output.txt
-│   └── test.py
+│   └── hw6.py
 ├── Assignment 7
-│   ├── requirements.txt
 │   └── sine.py
 └── README.md
 ```
 
-Each assignment folder is self-contained with its own `requirements.txt` file and a configuration file (`config.yaml`) for customizing hyperparameters and assignment-specific settings.
+- **Assignment 1 – Gaussian‑Basis Linear Regression**  
+  Fits a noisy sine wave by projecting inputs through radial‑basis functions (`basis_expansion.py`) and training a lightweight dense layer (`linear.py`). Emphasises feature engineering, closed‑form loss visualisation, and learning‑rate scheduling.
 
-#### How to Reproduce the Environment
+- **Assignment 2 – Multi‑Layer Perceptron on Spiral Data**  
+  Explores nonlinear decision boundaries using a configurable MLP (`MLP.py`). Shared utilities provide Gaussian feature mapping and baseline linear comparisons, while the training loop demonstrates weight initialisation, dropout, and metric logging.
+
+- **Assignment 3 – Convolutional Network for MNIST**  
+  Implements a small CNN (`cnn.py`) with two convolutional blocks, batch normalisation, and max‑pooling. Includes data loaders, simple augmentation, and accuracy tracking to highlight fundamentals of image classification.
+
+- **Assignment 4 – ResNet‑Style CIFAR Trainers**  
+  Parallel pipelines (`CIFAR10.py`, `CIFAR100.py`) benchmark a residual architecture on both CIFAR datasets. Each script handles advanced augmentation, learning‑rate warm‑up, and early stopping to illustrate scalable image‑classification workflows.
+
+- **Assignment 5 – AG News Sentence‑BERT Classifier**  
+  Encodes news headlines with Sentence‑BERT and trains a logistic‑regression head (`hw5.py`). Covers text cleaning, dataset stratification, learning‑rate reduction on plateau, and macro‑averaged evaluation metrics.
+
+- **Assignment 6 – Scratch‑Built Transformer**  
+  `hw6.py` assembles positional encoding, multi‑head attention, feed‑forward layers, and a custom Adam optimiser into a mini‑transformer. Trains on a synthetic token dataset to demonstrate sequence modelling, mask handling, and autoregressive inference.
+
+- **Assignment 7 – SIREN Image Reconstruction**  
+  Trains a sinusoidal‑representation network (`sine.py`) that maps 2‑D coordinates to RGB values, recreating images at arbitrary resolution. Highlights implicit neural representations, spectral bias, and qualitative evaluation via side‑by‑side plots.
+
+
+
+
+#### Reproducing Work
 
 1. **Create a Virtual Environment:**
    ```bash
@@ -97,13 +90,3 @@ Each assignment folder is self-contained with its own `requirements.txt` file an
    ```bash
    python basis_expansion.py
    ```
-
-### Assignments
-
-- **Assignment 1:** Linear Regression with Gaussian Basis Functions
-- **Assignment 2:** Multi-layer Perceptron for Spiral Classification
-- **Assignment 3:** CNN Classification of MNIST Digits
-- **Assignment 4:** CNN Classification on CIFAR10 and CIFAR100
-- **Assignment 5:** Text Classification using AG News Dataset
-- **Assignment 6:** Implementation of Multi-Head Attention and Transformer Blocks
-- **Assignment 7:** Image Fitting and Exploration with SIREN
