@@ -50,26 +50,26 @@ Additionally, relevant research papers will be provided throughout the semester 
 └── README.md
 ```
 
-- **Assignment 1 – Gaussian‑Basis Linear Regression**  
-  Fits a noisy sine wave by projecting inputs through radial‑basis functions (`basis_expansion.py`) and training a lightweight dense layer (`linear.py`). Emphasises feature engineering, closed‑form loss visualisation, and learning‑rate scheduling.
+- **Assignment 1** – *Gaussian‑Basis Linear Regression*  
+  - Fits a noisy sine wave by projecting inputs through radial‑basis functions (`basis_expansion.py`) and training a lightweight dense layer (`linear.py`). Emphasises feature engineering, closed‑form loss visualisation, and learning‑rate scheduling.
 
-- **Assignment 2 – Multi‑Layer Perceptron on Spiral Data**  
-  Explores nonlinear decision boundaries using a configurable MLP (`MLP.py`). Shared utilities provide Gaussian feature mapping and baseline linear comparisons, while the training loop demonstrates weight initialisation, dropout, and metric logging.
+- **Assignment 2** – *Spiral MLP Classifier*   
+  - Explores nonlinear decision boundaries using a configurable MLP (`MLP.py`). Shared utilities provide Gaussian feature mapping and baseline linear comparisons, while the training loop demonstrates weight initialisation, dropout, and metric logging.
 
-- **Assignment 3 – Convolutional Network for MNIST**  
-  Implements a small CNN (`cnn.py`) with two convolutional blocks, batch normalisation, and max‑pooling. Includes data loaders, simple augmentation, and accuracy tracking to highlight fundamentals of image classification.
+- **Assignment 3** – *MNIST*  
+  - Implements a small CNN (`cnn.py`) with two convolutional blocks, batch normalisation, and max‑pooling. Includes data loaders, simple augmentation, and accuracy tracking to highlight fundamentals of image classification.
 
-- **Assignment 4 – ResNet‑Style CIFAR Trainers**  
-  Parallel pipelines (`CIFAR10.py`, `CIFAR100.py`) benchmark a residual architecture on both CIFAR datasets. Each script handles advanced augmentation, learning‑rate warm‑up, and early stopping to illustrate scalable image‑classification workflows.
+- **Assignment 4** – *CIFAR*
+  - Parallel pipelines (`CIFAR10.py`, `CIFAR100.py`) benchmark a residual architecture on both CIFAR datasets. Each script handles advanced augmentation, learning‑rate warm‑up, and early stopping to illustrate scalable image‑classification workflows.
 
-- **Assignment 5 – AG News Sentence‑BERT Classifier**  
-  Encodes news headlines with Sentence‑BERT and trains a logistic‑regression head (`hw5.py`). Covers text cleaning, dataset stratification, learning‑rate reduction on plateau, and macro‑averaged evaluation metrics.
+- **Assignment 5** – *Text Classification with AG News*  
+  - Encodes news headlines with Sentence‑BERT and trains a logistic‑regression head (`hw5.py`). Covers text cleaning, dataset stratification, learning‑rate reduction on plateau, and macro‑averaged evaluation metrics.
 
-- **Assignment 6 – Scratch‑Built Transformer**  
-  `hw6.py` assembles positional encoding, multi‑head attention, feed‑forward layers, and a custom Adam optimiser into a mini‑transformer. Trains on a synthetic token dataset to demonstrate sequence modelling, mask handling, and autoregressive inference.
+- **Assignment 6** – *Transformer*  
+  - `hw6.py` assembles positional encoding, multi‑head attention, feed‑forward layers, and a custom Adam optimiser into a mini‑transformer. Trains on a synthetic token dataset to demonstrate sequence modelling, mask handling, and autoregressive inference.
 
-- **Assignment 7 – SIREN Image Reconstruction**  
-  Trains a sinusoidal‑representation network (`sine.py`) that maps 2‑D coordinates to RGB values, recreating images at arbitrary resolution. Highlights implicit neural representations, spectral bias, and qualitative evaluation via side‑by‑side plots.
+- **Assignment 7** – *SIREN Image Reconstruction*  
+  - Trains a sinusoidal‑representation network (`sine.py`) that maps 2‑D coordinates to RGB values, recreating images at arbitrary resolution. Highlights implicit neural representations, spectral bias, and qualitative evaluation via side‑by‑side plots.
 
 
 
